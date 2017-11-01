@@ -92,6 +92,9 @@
         type_value: 动作值 'avtivity'/url,
         game_id: 游戏ID,
         game_type: 游戏类型
+        
+        box_gift_ico: 盒子活动图标
+        box_gift_detail_img: 盒子活动详情图片
     }
 }
 ```
