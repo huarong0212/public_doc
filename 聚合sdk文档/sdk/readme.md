@@ -30,7 +30,7 @@ $sign = strtolower(md5($user_id . $app_id . $isadult . $timestamp . $key));
 | app_id   | int     | 应用ID     |
 | title   | string     | 订单标题     |
 | attach   | string     | 游戏订单号     |
-| money   | int     | 订单金额（单位:元）     |
+| money   | int     | 订单金额（单位:分）     |
 | server   | string     | 游戏区服     |
 | role   | string     | 游戏角色     |
 | ip   | string     | 用户IP     |
@@ -84,7 +84,7 @@ POST
 | app_id   | int     | 应用ID     |
 | order_sn   | string     | 聚合平台订单号     |
 | attach   | string     | 游戏订单号     |
-| money   | int     | 订单金额（单位:元）     |
+| money   | int     | 订单金额（单位:分）     |
 | server   | string     | 游戏区服     |
 | role   | string     | 游戏角色     |
 | ip   | string     | 用户IP     |
