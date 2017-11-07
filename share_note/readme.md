@@ -6,6 +6,11 @@
 ### PSR
 - [PSR - PHP 标准规范 中文版](https://github.com/summerblue/psr.phphub.org/tree/master/psrs)：重点关注 `PSR-1/PSR-2/PSR-4` 三条
 
+> 总结：
+> 类名使用大驼峰；方法名使用小驼峰；属性名、函数名、变量名不做强制要求，但务必统一，推荐用下划线分隔式。
+> 使用sublime的插件 [phpfmt](https://github.com/nanch/phpfmt_stable) 进行自动格式化
+
+
 *扩展*
 
 [composer 的使用](http://docs.phpcomposer.com/)
