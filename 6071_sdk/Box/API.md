@@ -95,6 +95,25 @@
         
         box_gift_ico: 盒子活动图标
         box_gift_detail_img: 盒子活动详情图片
+        
+        cate: [
+            {
+                ico: 图标
+                activity: 视图名称
+                value: 视图值
+            }
+            ...
+        ]
+        
+        active:[
+            {
+                ico: 图标
+                activity: 视图名称
+                value: 视图值
+                title: 标题
+                description: 说明
+            }
+        ]
     }
 }
 ```
