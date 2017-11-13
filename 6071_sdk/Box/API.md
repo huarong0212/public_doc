@@ -98,20 +98,24 @@
         
         cate: [
             {
-                ico: 图标
-                activity: 视图名称
-                value: 视图值
+                category_title: 标题
+                category_icon: 图标
+                category_desc: 说明
+                activity_class: 视图名称
+                activity_title: 视图标题
+                game_type: 值
             }
             ...
         ]
         
         active:[
             {
-                ico: 图标
-                activity: 视图名称
-                value: 视图值
-                title: 标题
-                description: 说明
+                category_title: 标题
+                category_icon: 图标
+                category_desc: 说明
+                activity_class: 视图名称
+                activity_title: 视图标题
+                game_type: 值
             }
         ]
     }
