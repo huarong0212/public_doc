@@ -31,17 +31,18 @@ class Sdk
      */
     public static function orderSign($data, $key)
     {
-        $p['user_id'] = $data['user_id'];
-        $p['app_id'] = $data['app_id'];
-        $p['attach'] = $data['attach'];
-        $p['money'] = $data['money'];
-        $p['server'] = $data['server'];
-        $p['role'] = $data['role'];
-        $p['ip'] = $data['ip'];
-        $p['app_key'] = $key;
+        $params['user_id'] = $data['user_id'];
+        $params['app_id'] = $data['app_id'];
+        $params['title'] = urlencode($data['title']);
+        $params['attach'] = urlencode($data['attach']);
+        $params['money'] = $data['money'];
+        $params['server'] = urlencode($data['server']);
+        $params['role'] = urlencode($data['role']);
+        $params['ip'] = urlencode($data['ip']);
+        $params['app_key'] = $key;
 
-        ksort($p);
-        $data['sign'] = strtolower(md5(http_build_query($p)));
+        ksort($params);
+        $data['sign'] = strtolower(md5(http_build_query($params)));
 
         return $data;
     }
