@@ -53,6 +53,8 @@
  - [返利申请](#repay-apply) 
  - [我的返利申请](#my-repay-apply) 
  - [抽奖奖品使用](#convert-game-money)
+ - [用户消息](#user-msg)
+ - [阅读消息](#read-msg)
 
 **公共请求参数列表**
 ```
@@ -342,7 +344,7 @@
             sort: 专题排序
             status: 专题状态
             
-            time: 活动时间 （格式：9.13-9.15）
+            time: 活动时间 （格式: 9.13-9.15）
             start_time: 开始时间
             end_time: 结束时间
         },
@@ -802,6 +804,8 @@
         signed: 是否已签到
         num: 连续签到次数
         signe_point: 本次签到积分
+        
+        new_massages: 消息条数
     }
 }
 ```
@@ -1851,3 +1855,54 @@
 }
 ```
 
+<h2 id="user-msg">用户消息列表</h2>
+
+每页12条。
+- 接口名: box/userMsg
+- 请求参数: 
+```
+{
+    user_id: 用户Id
+    page: 页码
+}
+```
+- 返回参数
+```
+{
+    code: 1
+    message: 接口信息
+    data: [
+        {
+            id: 消息ID
+            title: 消息标题
+            body: 消息内容
+            from_id: 发送人
+            from_name: 发送人昵称
+            from_role: 发送人角色
+            user_id: 用户ID
+            add_time；发送时间
+            is_read : 是否已读 0: 未读，1: 已读
+        }
+        ...
+    ]
+}
+```
+
+<h2 id="read-msg">消息阅读</h2>
+
+- 接口名: box/readMsg
+- 请求参数: 
+```
+{
+    user_id: 用户Id
+    msg_id: 消息Id
+}
+```
+- 返回参数
+```
+{
+    code: 1
+    message: 接口信息
+    data: 
+}
+```
