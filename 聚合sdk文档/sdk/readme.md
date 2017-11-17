@@ -31,14 +31,15 @@ $sign = strtolower(md5($user_id . $app_id . $isadult . $timestamp . $key));
 | title   | string     | 订单标题     |
 | attach   | string     | 游戏订单号     |
 | money   | int     | 订单金额（单位:分）     |
-| server   | string     | 游戏区服     |
-| role   | string     | 游戏角色     |
+| server   | string     | 游戏区服名     |
+| role   | string     | 游戏角色名     |
+| level   | string     | 游戏角色等级     |
 | ip   | string     | 用户IP     |
 | sign   | string     | 签名     |
 
 - 签名方式
 
-厂商需要将 `user_id/app_id/title/attach/money/server/role/ip/app_key` 参数列表按照键值进行字典排序，并对`string`型的值进行 `urlencode` 编码。参数与值用等于号(`=`)链接，参数之间用and符号(`&`)链接，形成如下格式的字符串`user_id=xxx&app_id=xxx&attach=xxx...&app_key=xxx`，对所得的字符串进行MD5加密后，字符串转为小写，最终得到签名`sign`的值。
+厂商需要将 `user_id/app_id/title/attach/money/server/role/level/ip/app_key` 参数列表按照键值进行字典排序，并对`string`型的值进行 `urlencode` 编码。参数与值用等于号(`=`)链接，参数之间用and符号(`&`)链接，形成如下格式的字符串`user_id=xxx&app_id=xxx&attach=xxx...&app_key=xxx`，对所得的字符串进行MD5加密后，字符串转为小写，最终得到签名`sign`的值。
 去掉`app_key`参数后将`sign`值传入参数，即为参数列表
 ```
 $params = [
@@ -49,6 +50,7 @@ $params = [
     'money' => ...,
     'server' =>  urlencode(...),
     'role' =>  urlencode(...),
+    'level' =>  urlencode(...),
     'ip' =>  urlencode(...)
 ];
 
@@ -85,8 +87,9 @@ POST
 | order_sn   | string     | 聚合平台订单号     |
 | attach   | string     | 游戏订单号     |
 | money   | int     | 订单金额（单位:分）     |
-| server   | string     | 游戏区服     |
-| role   | string     | 游戏角色     |
+| server   | string     | 游戏区服名     |
+| role   | string     | 游戏角色名     |
+| level   | string     | 游戏角色等级     |
 | ip   | string     | 用户IP     |
 | add_time   | string     | 聚合平台订单创建时间     |
 | sign   | string     | 签名     |
