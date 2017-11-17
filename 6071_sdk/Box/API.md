@@ -1763,10 +1763,12 @@
     user_id: 用户ID
     game_id: 游戏ID
     login_name: 游戏账号
-    role: 角色名
-    role_id: 角色ID
+    role: 游戏角色名
     server: 游戏区服
     money: 充值金额
+    time: 充值时间
+    qq: QQ号
+    role_id: 游戏角色ID
 }
 ```
 - 返回参数:  
