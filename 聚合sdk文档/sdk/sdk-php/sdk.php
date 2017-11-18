@@ -37,6 +37,7 @@ class Sdk
         $params['attach'] = urlencode($data['attach']);
         $params['money'] = $data['money'];
         $params['server'] = urlencode($data['server']);
+        $params['level'] = urlencode($data['level']);
         $params['role'] = urlencode($data['role']);
         $params['ip'] = urlencode($data['ip']);
         $params['app_key'] = $key;
