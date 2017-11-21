@@ -200,6 +200,8 @@
 {
     game_id: 游戏ID
     type: 游戏类型
+    
+    user_id: 用户ID
 }
 ```
 - 返回参数 
@@ -233,6 +235,7 @@
         is_comm: 是否推荐
         agent_id: 渠道ID
 
+        share_url: 分享链接
     }
 }
 ```
